@@ -1,5 +1,5 @@
-title: Nano Banana Pro Url
-description: "Generates images using Nano Banana Pro API and returns download URLs"
+title: "%nano-banana-pro-url%"
+description: "%generates-images-using-nano-banana-pro-api-and-returns-download%"
 nodes:
   - node_id: nano-banana-pro#1
     task: self::nano-banana-pro
@@ -21,7 +21,7 @@ nodes:
         from_flow:
           - input_handle: resolution
   - node_id: nano-banana-pro-result#1
-    title: "Nano Banana Pro Result Checker #1"
+    title: "%nano-banana-pro-result-checker-12%"
     inputs_from:
       - handle: sessionID
         from_node:
@@ -34,16 +34,16 @@ nodes:
     task: self::nano-banana-pro-result
 inputs_def:
   - handle: prompt
-    description: "Text prompt describing the image to generate"
+    description: "%text-prompt-describing-the-image-to-generate2%"
     json_schema:
       type: string
       ui:widget: text
-    nullable: false
     value: 一只小脑斧在人的脚边,抬头看着镜头
+    nullable: false
     executor_name: python
   - group: Optional
   - handle: aspectRatio
-    description: "Aspect ratio of the generated image"
+    description: "%aspect-ratio-of-the-generated-image3%"
     json_schema:
       type: string
       enum:
@@ -57,11 +57,11 @@ inputs_def:
         - 3:4
         - 2:3
         - 9:16
-    nullable: true
     value: 16:9
+    nullable: true
     executor_name: python
   - handle: outputFormat
-    description: "Output format of the generated image"
+    description: "%output-format-of-the-generated-image3%"
     json_schema:
       type: string
       enum:
@@ -69,23 +69,23 @@ inputs_def:
         - jpeg
         - webp
         - jpg
-    nullable: true
     value: webp
+    nullable: true
     executor_name: python
   - handle: resolution
-    description: "Resolution of the generated image (1K, 2K, or 4K)"
+    description: "%resolution-of-the-generated-image-1k-2k-or-4k2%"
     json_schema:
       type: string
       enum:
         - 1K
         - 2K
         - 4K
-    nullable: true
     value: 1K
+    nullable: true
     executor_name: python
 outputs_def:
   - handle: images
-    description: "Array of generated image URLs"
+    description: "%array-of-generated-image-urls2%"
     json_schema:
       type: array
       items:

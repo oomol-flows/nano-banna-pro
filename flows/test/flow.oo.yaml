@@ -1,6 +1,6 @@
 nodes:
   - node_id: nano-banana-pro-file#1
-    title: "Nano Banana Pro File #1"
+    title: "%nano-banana-pro-file-1%"
     inputs_from:
       - handle: prompt
         value: 一只小脑斧在人的脚边,抬头看着镜头
@@ -14,7 +14,7 @@ nodes:
         value: 1K
     subflow: self::nano-banana-pro-file
   - node_id: nano-banana-pro-url#1
-    title: "Nano Banana Pro Url #1"
+    title: "%nano-banana-pro-url-1%"
     inputs_from:
       - handle: prompt
         value: 一只小脑斧在人的脚边,抬头看着镜头

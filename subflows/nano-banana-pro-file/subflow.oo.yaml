@@ -1,5 +1,5 @@
-title: Nano Banana Pro File
-description: "Generates images using Nano Banana Pro API and saves them as files"
+title: "%nano-banana-pro-file%"
+description: "%generates-images-using-nano-banana-pro-api-and-saves-them-as-fil%"
 nodes:
   - node_id: nano-banana-pro#1
     task: self::nano-banana-pro
@@ -21,7 +21,7 @@ nodes:
         from_flow:
           - input_handle: resolution
   - node_id: nano-banana-pro-result#1
-    title: "Nano Banana Pro Result Checker #1"
+    title: "%nano-banana-pro-result-checker-1%"
     inputs_from:
       - handle: sessionID
         from_node:
@@ -33,7 +33,7 @@ nodes:
         value:
     task: self::nano-banana-pro-result
   - node_id: map#1
-    title: "映射 #1"
+    title: "%1%"
     inputs_from:
       - handle: array
         from_node:
@@ -56,7 +56,7 @@ nodes:
             nullable: true
 inputs_def:
   - handle: prompt
-    description: "Text prompt describing the image to generate"
+    description: "%text-prompt-describing-the-image-to-generate%"
     json_schema:
       type: string
       ui:widget: text
@@ -65,14 +65,14 @@ inputs_def:
     executor_name: python
   - group: Optional
   - handle: save_dir
-    description: "Directory path where images will be saved"
+    description: "%directory-path-where-images-will-be-saved%"
     json_schema:
       type: string
       ui:widget: dir
     value:
     nullable: true
   - handle: aspectRatio
-    description: "Aspect ratio of the generated image"
+    description: "%aspect-ratio-of-the-generated-image2%"
     json_schema:
       type: string
       enum:
@@ -90,7 +90,7 @@ inputs_def:
     nullable: true
     executor_name: python
   - handle: outputFormat
-    description: "Output format of the generated image"
+    description: "%output-format-of-the-generated-image2%"
     json_schema:
       type: string
       enum:
@@ -102,7 +102,7 @@ inputs_def:
     nullable: true
     executor_name: python
   - handle: resolution
-    description: "Resolution of the generated image (1K, 2K, or 4K)"
+    description: "%resolution-of-the-generated-image-1k-2k-or-4k%"
     json_schema:
       type: string
       enum:
@@ -114,7 +114,7 @@ inputs_def:
     executor_name: python
 outputs_def:
   - handle: array
-    description: "Array of file paths where generated images were saved"
+    description: "%array-of-file-paths-where-generated-images-were-saved%"
     json_schema:
       type: array
     nullable: false

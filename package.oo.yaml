@@ -7,6 +7,8 @@ icon: ./icon.png
 dependencies:
   array: 0.1.5
   downloader: 0.1.1
-name: nano-banna-pro
+name: nano_banana_pro
+displayName: "%display-name%"
+description: "%description%"
 repository: https://github.com/oomol-flows/nano-banna-pro.git
 releaseNotes: init

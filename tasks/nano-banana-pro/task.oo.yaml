@@ -1,6 +1,6 @@
 inputs_def:
   - handle: prompt
-    description: The text prompt describing the image to generate
+    description: "%the-text-prompt-describing-the-image-to-generate%"
     json_schema:
       type: string
       ui:widget: text
@@ -10,7 +10,7 @@ inputs_def:
     collapsed: true
 
   - handle: aspectRatio
-    description: Aspect ratio of the generated image
+    description: "%aspect-ratio-of-the-generated-image%"
     json_schema:
       type: string
       enum:
@@ -28,7 +28,7 @@ inputs_def:
     nullable: true
 
   - handle: outputFormat
-    description: Output format of the generated image
+    description: "%output-format-of-the-generated-image%"
     json_schema:
       type: string
       enum:
@@ -40,7 +40,7 @@ inputs_def:
     nullable: true
 
   - handle: resolution
-    description: Resolution of the generated image (must be uppercase K)
+    description: "%resolution-of-the-generated-image-must-be-uppercase-k%"
     json_schema:
       type: string
       enum:
@@ -52,12 +52,12 @@ inputs_def:
 
 outputs_def:
   - handle: sessionID
-    description: "Session ID for the image generation request"
+    description: "%session-id-for-the-image-generation-request%"
     json_schema:
       type: string
 
   - handle: success
-    description: "Whether the submission was successful"
+    description: "%whether-the-submission-was-successful%"
     json_schema:
       type: boolean
 
@@ -67,8 +67,7 @@ executor:
     entry: __init__.py
     spawn: false
 
-title: "Nano Banana Pro Image Generator"
+title: "%nano-banana-pro-image-generator%"
 icon: ":carbon:image:"
-description: "Generate images using the nano banana pro API. Submits a request
-  and returns a session ID for tracking the generation."
+description: "%generate-images-using-the-nano-banana-pro-api-submits-a-request%"
 private: true

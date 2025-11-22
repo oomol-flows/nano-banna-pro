@@ -18,7 +18,7 @@ inputs_def:
     nullable: true
 outputs_def:
   - handle: saved_path
-    description: "Full path where the image was saved"
+    description: "%full-path-where-the-image-was-saved%"
     json_schema:
       type: string
 
