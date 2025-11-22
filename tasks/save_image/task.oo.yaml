@@ -1,0 +1,29 @@
+title: "保存图片"
+description: "从URL下载图片并保存到指定路径"
+icon: ":carbon:save-image:"
+
+inputs_def:
+  - handle: image_url
+    description: "图片URL地址"
+    json_schema:
+      type: string
+    nullable: false
+
+  - handle: save_dir
+    description: "图片保存目录路径"
+    json_schema:
+      type: string
+      ui:widget: dir
+    value:
+    nullable: true
+outputs_def:
+  - handle: saved_path
+    description: "图片保存的完整路径"
+    json_schema:
+      type: string
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false

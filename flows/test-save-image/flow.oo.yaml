@@ -1,0 +1,26 @@
+title: "测试保存图片功能"
+description: "测试从URL下载图片并保存到指定目录的功能"
+
+nodes:
+  - node_id: save_image#1
+    task: self::save_image
+    inputs_from:
+      - handle: save_dir
+        value: "/oomol-driver/oomol-storage/test-images"
+      - handle: image_url
+      - handle: filename
+        value: "test-image.png"
+  - node_id: nano-banana-pro-file#1
+    title: "Nano Banana Pro File #1"
+    inputs_from:
+      - handle: prompt
+        value: 一只小脑斧在人的脚边,抬头看着镜头
+      - handle: aspectRatio
+        value: 16:9
+      - handle: outputFormat
+        value: webp
+      - handle: resolution
+        value: 1K
+      - handle: save_dir
+        value: /oomol-driver/oomol-storage/做梦
+    subflow: self::nano-banana-pro-file

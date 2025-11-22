@@ -1,0 +1,98 @@
+title: Nano Banana Pro Url
+nodes:
+  - node_id: nano-banana-pro#1
+    task: self::nano-banana-pro
+    inputs_from:
+      - handle: prompt
+        value: "一只小脑斧在人的脚边,抬头看着镜头"
+        from_flow:
+          - input_handle: prompt
+      - handle: aspectRatio
+        value: "16:9"
+        from_flow:
+          - input_handle: aspectRatio
+      - handle: outputFormat
+        value: "webp"
+        from_flow:
+          - input_handle: outputFormat
+      - handle: resolution
+        value: "1K"
+        from_flow:
+          - input_handle: resolution
+  - node_id: nano-banana-pro-result#1
+    title: "Nano Banana Pro Result Checker #1"
+    inputs_from:
+      - handle: sessionID
+        from_node:
+          - node_id: nano-banana-pro#1
+            output_handle: sessionID
+      - handle: pollingInterval
+        value:
+      - handle: timeout
+        value:
+    task: self::nano-banana-pro-result
+inputs_def:
+  - handle: prompt
+    json_schema:
+      type: string
+      ui:widget: text
+    nullable: false
+    description: The text prompt describing the image to generate
+    value: 一只小脑斧在人的脚边,抬头看着镜头
+    executor_name: python
+  - group: Optional
+  - handle: aspectRatio
+    json_schema:
+      type: string
+      enum:
+        - 21:9
+        - 16:9
+        - 3:2
+        - 4:3
+        - 5:4
+        - 1:1
+        - 4:5
+        - 3:4
+        - 2:3
+        - 9:16
+    nullable: true
+    description: Aspect ratio of the generated image
+    value: 16:9
+    executor_name: python
+  - handle: outputFormat
+    json_schema:
+      type: string
+      enum:
+        - png
+        - jpeg
+        - webp
+        - jpg
+    nullable: true
+    description: Output format of the generated image
+    value: webp
+    executor_name: python
+  - handle: resolution
+    json_schema:
+      type: string
+      enum:
+        - 1K
+        - 2K
+        - 4K
+    nullable: true
+    description: Resolution of the generated image (must be uppercase K)
+    value: 1K
+    executor_name: python
+outputs_def:
+  - handle: images
+    json_schema:
+      type: array
+      items:
+        type: string
+    nullable: false
+    description: Array of generated image URLs
+    executor_name: python
+outputs_from:
+  - handle: images
+    from_node:
+      - node_id: nano-banana-pro-result#1
+        output_handle: images

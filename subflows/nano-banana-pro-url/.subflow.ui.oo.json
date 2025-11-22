@@ -1,0 +1,38 @@
+{
+  "nodes": {
+    "nano-banana-pro#1": {
+      "rfNode": {
+        "position": {
+          "x": 486,
+          "y": 0
+        }
+      }
+    },
+    "nano-banana-pro-result#1": {
+      "rfNode": {
+        "position": {
+          "x": 972,
+          "y": 27
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 72
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 1458,
+          "y": 126
+        }
+      }
+    }
+  }
+}

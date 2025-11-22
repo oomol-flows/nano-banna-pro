@@ -1,0 +1,43 @@
+inputs_def:
+  - handle: sessionID
+    description: The session ID returned from the image generation submission
+    json_schema:
+      type: string
+    nullable: false
+
+  - group: Optional Settings
+    collapsed: true
+
+  - handle: pollingInterval
+    description: Polling interval in seconds (default 2 seconds)
+    json_schema:
+      type: number
+    value: 2
+    nullable: true
+
+  - handle: timeout
+    description: Maximum time to wait in seconds (default 300 seconds / 5 minutes)
+    json_schema:
+      type: number
+    value: 300
+    nullable: true
+
+outputs_def:
+  - handle: images
+    description: Array of generated image URLs
+    json_schema:
+      type: array
+      items:
+        type: string
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
+
+title: "Nano Banana Pro Result Checker with Polling"
+icon: ":carbon:progress-bar:"
+description: "Continuously polls the image generation status until completion,
+  failure, or timeout. Returns the final state and download URL when completed."
+private: true
