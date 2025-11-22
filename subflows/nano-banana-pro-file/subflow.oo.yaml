@@ -1,4 +1,5 @@
 title: Nano Banana Pro File
+description: "Generates images using Nano Banana Pro API and saves them as files"
 nodes:
   - node_id: nano-banana-pro#1
     task: self::nano-banana-pro
@@ -55,7 +56,7 @@ nodes:
             nullable: true
 inputs_def:
   - handle: prompt
-    description: The text prompt describing the image to generate
+    description: "Text prompt describing the image to generate"
     json_schema:
       type: string
       ui:widget: text
@@ -64,13 +65,14 @@ inputs_def:
     executor_name: python
   - group: Optional
   - handle: save_dir
+    description: "Directory path where images will be saved"
     json_schema:
       type: string
       ui:widget: dir
     value:
     nullable: true
   - handle: aspectRatio
-    description: Aspect ratio of the generated image
+    description: "Aspect ratio of the generated image"
     json_schema:
       type: string
       enum:
@@ -88,7 +90,7 @@ inputs_def:
     nullable: true
     executor_name: python
   - handle: outputFormat
-    description: Output format of the generated image
+    description: "Output format of the generated image"
     json_schema:
       type: string
       enum:
@@ -100,7 +102,7 @@ inputs_def:
     nullable: true
     executor_name: python
   - handle: resolution
-    description: Resolution of the generated image (must be uppercase K)
+    description: "Resolution of the generated image (1K, 2K, or 4K)"
     json_schema:
       type: string
       enum:
@@ -112,6 +114,7 @@ inputs_def:
     executor_name: python
 outputs_def:
   - handle: array
+    description: "Array of file paths where generated images were saved"
     json_schema:
       type: array
     nullable: false
