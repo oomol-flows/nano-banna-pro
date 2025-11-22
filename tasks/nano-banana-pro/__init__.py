@@ -1,15 +1,13 @@
 #region generated meta
 import typing
-
 class Inputs(typing.TypedDict):
     prompt: str
-    aspectRatio: typing.NotRequired[str]
-    outputFormat: typing.NotRequired[str]
-    resolution: typing.NotRequired[str]
-
+    aspectRatio: typing.Literal["21:9", "16:9", "3:2", "4:3", "5:4", "1:1", "4:5", "3:4", "2:3", "9:16"] | None
+    outputFormat: typing.Literal["png", "jpeg", "webp", "jpg"] | None
+    resolution: typing.Literal["1K", "2K", "4K"] | None
 class Outputs(typing.TypedDict):
-    sessionID: str
-    success: bool
+    sessionID: typing.NotRequired[str]
+    success: typing.NotRequired[bool]
 #endregion
 
 from oocana import Context
