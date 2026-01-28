@@ -1,198 +1,159 @@
 # Nano Banana Pro
 
-**Generate high-quality images using the Nano Banana Pro API with customizable resolution, aspect ratio, and format options for creative workflows.**
+**Turn your words into beautiful images with just a few clicks.**
 
 [中文文档](./README_zh-CN.md)
 
-## Overview
+---
 
-Nano Banana Pro is an OOMOL package that provides an easy-to-use interface for generating AI images using the Nano Banana Pro API. This package offers both URL-based and file-based workflows, allowing you to seamlessly integrate AI image generation into your creative projects.
+## What is Nano Banana Pro?
 
-## Features
+Nano Banana Pro helps you create stunning images from simple text descriptions. Whether you're brainstorming ideas, creating content, or just exploring your creativity, this tool makes it easy to bring your imagination to life.
 
-- **Text-to-Image Generation**: Create images from text prompts using advanced AI models
-- **Flexible Output Options**:
-  - Multiple aspect ratios (21:9, 16:9, 3:2, 4:3, 5:4, 1:1, 4:5, 3:4, 2:3, 9:16)
-  - Various formats (PNG, JPEG, WebP, JPG)
-  - Resolution options (1K, 2K, 4K)
-- **Two Workflow Types**:
-  - **URL Output**: Get direct download URLs for generated images
-  - **File Output**: Automatically save generated images to your local directory
-- **Automatic Polling**: Built-in status checking that waits for image generation to complete
-- **Batch Processing**: Generate and save multiple images efficiently
+Think of it like having an artist at your fingertips - you describe what you want to see, and Nano Banana Pro creates it for you.
 
-## Available Blocks
+---
 
-### 1. Nano Banana Pro Image Generator (Private Task)
+## What Can You Do?
 
-Submits an image generation request to the Nano Banana Pro API.
+### Create Images from Text
 
-**Inputs:**
-- `prompt` (required): Text description of the image to generate
-- `aspectRatio` (optional): Aspect ratio of the output image (default: 1:1)
-- `outputFormat` (optional): Image format (default: png)
-- `resolution` (optional): Image resolution (default: 1K)
+Simply describe what you want to see, and watch it come to life. For example:
+- "A peaceful mountain landscape at sunset"
+- "A cute robot playing with a puppy"
+- "A cozy coffee shop on a rainy day"
 
-**Outputs:**
-- `sessionID`: Unique session identifier for tracking the generation process
-- `success`: Boolean indicating whether the submission was successful
+The more detailed your description, the better your results will be.
 
-### 2. Nano Banana Pro Result Checker (Private Task)
+### Choose Your Image Style
 
-Continuously polls the API to check image generation status until completion.
+**Pick the Perfect Shape:**
+- Square images for social media posts
+- Widescreen for presentations and videos
+- Portrait for phone wallpapers and stories
+- Cinematic for dramatic scenes
 
-**Inputs:**
-- `sessionID` (required): Session ID from the image generator
-- `pollingInterval` (optional): Time between status checks in seconds (default: 2)
-- `timeout` (optional): Maximum wait time in seconds (default: 300)
+**Select Your Format:**
+- Standard image files for everyday use
+- Web-friendly formats that load quickly
+- High-quality formats that preserve every detail
 
-**Outputs:**
-- `images`: Array of generated image URLs
+**Control the Quality:**
+- Quick previews to test your ideas
+- Standard quality for most projects
+- Ultra-high quality for professional work
 
-### 3. Save Image (Private Task)
+### Save Your Creations
 
-Downloads an image from a URL and saves it to a specified directory.
+Your generated images can be:
+- Saved directly to your computer
+- Kept as web links for easy sharing
+- Organized in folders of your choice
 
-**Inputs:**
-- `image_url` (required): URL of the image to download
-- `save_dir` (optional): Directory path where the image will be saved
+---
 
-**Outputs:**
-- `saved_path`: Full path where the image was saved
+## How It Works
 
-### 4. Nano Banana Pro URL (Subflow)
+Nano Banana Pro gives you two building blocks that work together:
 
-Complete workflow that generates images and returns download URLs.
+### 1. Image Generator
 
-**Inputs:**
-- `prompt` (required): Text description of the image to generate
-- `aspectRatio` (optional): Aspect ratio (default: 16:9)
-- `outputFormat` (optional): Image format (default: webp)
-- `resolution` (optional): Image resolution (default: 1K)
+This is where the magic begins. You provide a description of what you want to create, and the generator starts working on your image. It gives you a tracking number so you can check on the progress.
 
-**Outputs:**
-- `images`: Array of generated image URLs
+### 2. Result Checker
 
-### 5. Nano Banana Pro File (Subflow)
+This watches your image as it's being created and lets you know when it's ready. It automatically waits for the image to finish, so you don't have to keep checking back.
 
-Complete workflow that generates images and saves them as local files.
+**Working Together:**
+These two blocks are designed to complement each other. You might consider connecting the Image Generator to the Result Checker for a smooth workflow - the generator creates your tracking number, and the checker uses it to monitor your image until it's complete. This combination often works well when you want a hands-free experience.
 
-**Inputs:**
-- `prompt` (required): Text description of the image to generate
-- `save_dir` (optional): Directory where images will be saved
-- `aspectRatio` (optional): Aspect ratio (default: 16:9)
-- `outputFormat` (optional): Image format (default: webp)
-- `resolution` (optional): Image resolution (default: 1K)
+Of course, you can also use each block separately or combine them with other tools in your own creative way. The choice is yours.
 
-**Outputs:**
-- `array`: Array of file paths where generated images were saved
+---
 
-## Usage Examples
+## Getting Started
 
-### Using the URL Workflow
+### Your First Image
 
-The URL workflow is ideal when you want to work with image URLs directly or process images in memory:
+1. Start with the **Image Generator** block
+2. Write a description of what you'd like to create
+3. Connect it to the **Result Checker** block
+4. Let it run and wait for your image to appear
 
-1. Add the "Nano Banana Pro URL" subflow to your workflow
-2. Connect a text prompt (e.g., "A small tiger cub looking up at the camera")
-3. Optionally configure aspect ratio, format, and resolution
-4. The workflow will return an array of image URLs you can use in subsequent blocks
+That's it! Your image will be ready to view and use.
 
-### Using the File Workflow
+### Tips for Better Results
 
-The File workflow is perfect when you need local copies of generated images:
+**Write Clear Descriptions:**
+Instead of just "a dog," try "a golden retriever puppy playing in a sunny park." More details help create exactly what you're imagining.
 
-1. Add the "Nano Banana Pro File" subflow to your workflow
-2. Provide a text prompt describing your desired image
-3. Specify a directory where images should be saved
-4. Optionally configure aspect ratio, format, and resolution
-5. The workflow will return an array of local file paths
+**Start Simple:**
+When trying out ideas, use the faster quality settings. Once you're happy with the result, you can recreate it in higher quality.
 
-### Custom Workflows
+**Choose the Right Shape:**
+Think about where you'll use the image. Phone screens work best with vertical images, while computer screens prefer horizontal ones.
 
-You can also build custom workflows using the individual task blocks:
+**Be Patient with High Quality:**
+Better quality images take a bit longer to create, but the results are worth the wait. Plan accordingly if you need images quickly.
 
-1. Use "Nano Banana Pro Image Generator" to submit requests
-2. Pass the `sessionID` to "Nano Banana Pro Result Checker" to poll for results
-3. Optionally use "Save Image" to download images from the returned URLs
+---
 
-## Configuration Options
+## Common Uses
 
-### Aspect Ratios
+### Content Creation
+Generate images for blog posts, social media, or presentations without needing a photographer or designer.
 
-Choose from various aspect ratios to match your creative needs:
-- Cinematic: 21:9
-- Widescreen: 16:9
-- Photography: 3:2, 4:3
-- Square: 1:1
-- Portrait: 4:5, 3:4, 2:3
-- Mobile: 9:16
+### Brainstorming
+Visualize concepts and ideas quickly to help communicate your vision to others.
 
-### Output Formats
+### Personal Projects
+Create custom artwork for personal use, gifts, or home decoration.
 
-- **PNG**: Lossless compression, supports transparency
-- **JPEG/JPG**: Smaller file sizes, good for photos
-- **WebP**: Modern format with excellent compression
+### Learning and Exploration
+Experiment with different artistic styles and see what's possible with AI image generation.
 
-### Resolution
+---
 
-- **1K**: Fast generation, suitable for previews and web use
-- **2K**: Balanced quality and generation time
-- **4K**: Highest quality, longer generation time
+## Making the Most of Nano Banana Pro
 
-## Technical Details
+**Experiment Freely:**
+Try different descriptions and settings to discover what works best for your needs.
 
-### Architecture
+**Keep Organized:**
+Name your folders clearly so you can find your images later.
 
-The package consists of:
-- **3 Private Task Blocks**: Core functionality for API interaction and file operations
-- **2 Subflows**: Pre-configured workflows for common use cases
-- **Python Executor**: All tasks run using Python with async support
+**Save Time:**
+Create multiple variations at once to compare and choose your favorites.
 
-### Dependencies
+**Stay Creative:**
+Don't be afraid to try unusual or imaginative descriptions - you might be surprised by the results!
 
-The package automatically installs all required dependencies through the bootstrap script:
-- Python packages managed via Poetry
-- Node.js packages managed via npm
+---
 
-### API Integration
+## Need Help?
 
-- Connects to the Nano Banana Pro image generation service
-- Uses OOMOL token authentication via `context.oomol_token()`
-- Implements automatic retry and timeout handling
-- Provides progress reporting during long operations
+**Images Not Appearing?**
+- Make sure your description is clear and detailed
+- Check that you're connected to the internet
+- Try a simpler image first to test the system
 
-## Best Practices
+**Taking Too Long?**
+- High-quality images naturally take more time
+- You can increase the waiting time in the settings if needed
+- Starting with lower quality can help you preview faster
 
-1. **Start with lower resolutions** (1K) for testing and previews
-2. **Use descriptive prompts** for better image quality
-3. **Choose appropriate aspect ratios** based on your final use case
-4. **Monitor timeout settings** for high-resolution images (they may take longer)
-5. **Organize saved files** by using specific directory structures
+**Something Not Working?**
+- Double-check that all blocks are connected properly
+- Make sure you've provided all the required information
+- Try restarting the workflow
 
-## Troubleshooting
+---
 
-**Images not generating:**
-- Check your OOMOL token is valid
-- Verify the prompt is descriptive enough
-- Ensure network connectivity
+## Learn More
 
-**Timeout errors:**
-- Increase the timeout value for high-resolution images
-- Check if the API service is available
+- Repository: [https://github.com/oomol-flows/nano-banna-pro](https://github.com/oomol-flows/nano-banna-pro)
+- Version: 0.0.2
 
-**File save errors:**
-- Verify the save directory exists and has write permissions
-- Ensure sufficient disk space is available
+---
 
-## Repository
-
-[https://github.com/oomol-flows/nano-banna-pro](https://github.com/oomol-flows/nano-banna-pro)
-
-## Version
-
-0.0.1
-
-## License
-
-See repository for license information.
+*Nano Banana Pro makes AI image generation accessible to everyone. No technical knowledge required - just your imagination.*
