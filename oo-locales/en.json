@@ -1,7 +1,4 @@
 {
-  "1": "Mapping #1",
-  "12": "Download file #1",
-  "13": "Save image #1",
   "display-name": "Nano Banana Pro",
   "description": "Generate high-quality images using Nano Banana Pro API with customizable resolution, aspect ratio, and format options for creative workflows.",
   "nano-banana-pro-image-generator": "Nano Banana Pro Image Generator",
@@ -17,12 +14,5 @@
   "the-session-id-returned-from-the-image-generation-submission": "The session ID returned from the image generation submission",
   "polling-interval-in-seconds-default-2-seconds": "Polling interval in seconds (default 2 seconds)",
   "maximum-time-to-wait-in-seconds-default-300-seconds-5-minutes": "Maximum time to wait in seconds (default 300 seconds / 5 minutes)",
-  "array-of-generated-image-urls": "Array of generated image URLs",
-  "save-image": "Save Image",
-  "downloads-an-image-from-a-url-and-saves-it-to-a-specified-direct": "Downloads an image from a URL and saves it to a specified directory",
-  "url-of-the-image-to-download": "URL of the image to download",
-  "directory-path-where-the-image-will-be-saved": "Directory path where the image will be saved",
-  "full-path-where-the-image-was-saved": "Full path where the image was saved",
-  "nano-banana-pro-result-checker-1": "Nano Banana Pro Result Checker #1",
-  "nano-banana-pro-result-checker-12": "Nano Banana Pro Result Checker #1"
+  "array-of-generated-image-urls": "Array of generated image URLs"
 }
