@@ -1,0 +1,20 @@
+{
+  "nodes": {
+    "nano-banana-pro#1": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "nano-banana-pro-result#1": {
+      "rfNode": {
+        "position": {
+          "x": 600,
+          "y": 0
+        }
+      }
+    }
+  }
+}

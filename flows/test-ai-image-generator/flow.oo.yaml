@@ -1,0 +1,20 @@
+title: "%test-ai-image-generator-subflow%"
+description: "%test-flow-for-the-ai-image-generator-subflow%"
+
+nodes:
+  - node_id: ai-image-generator#1
+    title: "%ai-image-generator-1%"
+    subflow: self::ai-image-generator
+    inputs_from:
+      - handle: prompt
+        value: "A beautiful sunset over mountains with vibrant colors"
+      - handle: aspectRatio
+        value: 16:9
+      - handle: outputFormat
+        value: png
+      - handle: resolution
+        value: 2K
+      - handle: pollingInterval
+        value: 2
+      - handle: timeout
+        value: 300

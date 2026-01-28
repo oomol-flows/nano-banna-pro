@@ -1,6 +1,6 @@
 {
   "display-name": "Nano Banana Pro",
-  "description": "Generate high-quality images using Nano Banana Pro API with customizable resolution, aspect ratio, and format options for creative workflows.",
+  "description": "Create stunning images from text descriptions using AI with customizable quality, aspect ratio, and format options for any creative project.",
   "nano-banana-pro-image-generator": "Nano Banana Pro Image Generator",
   "generate-images-using-the-nano-banana-pro-api-submits-a-request": "Generate images using the nano banana pro API. Submits a request and returns a session ID for tracking the generation.",
   "the-text-prompt-describing-the-image-to-generate": "The text prompt describing the image to generate",
@@ -14,5 +14,23 @@
   "the-session-id-returned-from-the-image-generation-submission": "The session ID returned from the image generation submission",
   "polling-interval-in-seconds-default-2-seconds": "Polling interval in seconds (default 2 seconds)",
   "maximum-time-to-wait-in-seconds-default-300-seconds-5-minutes": "Maximum time to wait in seconds (default 300 seconds / 5 minutes)",
-  "array-of-generated-image-urls": "Array of generated image URLs"
+  "array-of-generated-image-urls": "Array of generated image URLs",
+  "nano-banana-pro-1": "Nano Banana Pro Image Generator #1",
+  "nano-banana-pro-12": "Nano Banana Pro Result Checker (with Polling) #1",
+  "test-ai-image-generator-subflow": "Test AI Image Generator Subflow",
+  "test-flow-for-the-ai-image-generator-subflow": "Test flow for the ai-image-generator subflow",
+  "ai-image-generator-1": "AI Image Generator #1",
+  "nano-banana-pro-image-generator-1": "Nano Banana Pro Image Generator #1",
+  "nano-banana-pro-result-checker-1": "Nano Banana Pro Result Checker #1",
+  "ai-image-generator-title": "AI Image Generator",
+  "ai-image-generator-description": "Generate high-quality images using AI with customizable settings for resolution, aspect ratio, and format",
+  "ai-image-generator-prompt-input": "Text prompt describing the image to generate",
+  "ai-image-generator-aspect-ratio-input": "Aspect ratio of the generated image (default: 1:1)",
+  "ai-image-generator-output-format-input": "Output format for the generated image (default: png)",
+  "ai-image-generator-resolution-input": "Resolution of the generated image: 1K, 2K, or 4K (default: 1K)",
+  "ai-image-generator-polling-interval-input": "Polling interval in seconds to check generation status (default: 2)",
+  "ai-image-generator-timeout-input": "Maximum time to wait for generation in seconds (default: 300)",
+  "ai-image-generator-images-output": "Array of generated image file paths",
+  "ai-image-generator-session-id-output": "Session ID for the image generation request",
+  "ai-image-generator-success-output": "Whether the image generation was successful"
 }

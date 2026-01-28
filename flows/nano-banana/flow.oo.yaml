@@ -1,0 +1,24 @@
+nodes:
+  - node_id: nano-banana-pro#1
+    title: "%nano-banana-pro-1%"
+    inputs_from:
+      - handle: prompt
+      - handle: aspectRatio
+        value: 1:1
+      - handle: outputFormat
+        value: png
+      - handle: resolution
+        value: 1K
+    task: self::nano-banana-pro
+  - node_id: nano-banana-pro-result#1
+    title: "%nano-banana-pro-12%"
+    inputs_from:
+      - handle: sessionID
+        from_node:
+          - node_id: nano-banana-pro#1
+            output_handle: sessionID
+      - handle: pollingInterval
+        value: 2
+      - handle: timeout
+        value: 300
+    task: self::nano-banana-pro-result

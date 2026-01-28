@@ -1,0 +1,166 @@
+inputs_def:
+  # === Primary Input (always visible) ===
+  - handle: prompt
+    description: "%ai-image-generator-prompt-input%"
+    json_schema:
+      type: string
+      ui:widget: text
+    nullable: false
+    executor_name: python
+
+  # === Optional Settings (collapsed group) ===
+  - group: Optional Settings
+    collapsed: false
+
+  - handle: aspectRatio
+    description: "%ai-image-generator-aspect-ratio-input%"
+    json_schema:
+      type: string
+      enum:
+        - 21:9
+        - 16:9
+        - 3:2
+        - 4:3
+        - 5:4
+        - 1:1
+        - 4:5
+        - 3:4
+        - 2:3
+        - 9:16
+    value: 1:1
+    nullable: true
+    executor_name: python
+
+  - handle: outputFormat
+    description: "%ai-image-generator-output-format-input%"
+    json_schema:
+      type: string
+      enum:
+        - png
+        - jpeg
+        - webp
+        - jpg
+    value: png
+    nullable: true
+    executor_name: python
+
+  - handle: resolution
+    description: "%ai-image-generator-resolution-input%"
+    json_schema:
+      type: string
+      enum:
+        - 1K
+        - 2K
+        - 4K
+    value: 1K
+    nullable: true
+    executor_name: python
+
+  - handle: pollingInterval
+    description: "%ai-image-generator-polling-interval-input%"
+    json_schema:
+      type: number
+    value: 2
+    nullable: true
+    executor_name: python
+
+  - handle: timeout
+    description: "%ai-image-generator-timeout-input%"
+    json_schema:
+      type: number
+    value: 300
+    nullable: true
+    executor_name: python
+
+outputs_def:
+  # === Primary Output ===
+  - handle: images
+    description: "%ai-image-generator-images-output%"
+    json_schema:
+      type: array
+      items:
+        type: string
+        ui:widget: file
+    nullable: false
+    executor_name: python
+
+  # === Status Info (collapsed group) ===
+  - group: Status Info
+    collapsed: true
+
+  - handle: sessionID
+    description: "%ai-image-generator-session-id-output%"
+    json_schema:
+      type: string
+    nullable: false
+    executor_name: python
+
+  - handle: success
+    description: "%ai-image-generator-success-output%"
+    json_schema:
+      type: boolean
+    nullable: false
+    executor_name: python
+
+nodes:
+  - node_id: nano-banana-pro#1
+    title: "%nano-banana-pro-image-generator-1%"
+    task: self::nano-banana-pro
+    inputs_from:
+      - handle: prompt
+        from_flow:
+          - input_handle: prompt
+      - handle: aspectRatio
+        value: 1:1
+        from_flow:
+          - input_handle: aspectRatio
+      - handle: outputFormat
+        value: png
+        from_flow:
+          - input_handle: outputFormat
+      - handle: resolution
+        value: 1K
+        from_flow:
+          - input_handle: resolution
+    progress_weight: 10
+
+  - node_id: nano-banana-pro-result#1
+    title: "%nano-banana-pro-result-checker-1%"
+    task: self::nano-banana-pro-result
+    inputs_from:
+      - handle: sessionID
+        from_node:
+          - node_id: nano-banana-pro#1
+            output_handle: sessionID
+      - handle: pollingInterval
+        value: 2
+        from_flow:
+          - input_handle: pollingInterval
+      - handle: timeout
+        value: 300
+        from_flow:
+          - input_handle: timeout
+    progress_weight: 90
+
+outputs_from:
+  - handle: images
+    from_node:
+      - node_id: nano-banana-pro-result#1
+        output_handle: images
+
+  - handle: sessionID
+    from_node:
+      - node_id: nano-banana-pro#1
+        output_handle: sessionID
+
+  - handle: success
+    from_node:
+      - node_id: nano-banana-pro#1
+        output_handle: success
+
+forward_previews:
+  - nano-banana-pro-result#1
+
+title: "%ai-image-generator-title%"
+icon: ":carbon:image-search:"
+description: "%ai-image-generator-description%"
