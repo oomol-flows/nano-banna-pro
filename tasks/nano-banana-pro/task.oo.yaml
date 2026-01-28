@@ -70,4 +70,4 @@ executor:
 title: "%nano-banana-pro-image-generator%"
 icon: ":carbon:image:"
 description: "%generate-images-using-the-nano-banana-pro-api-submits-a-request%"
-private: true
+private: false

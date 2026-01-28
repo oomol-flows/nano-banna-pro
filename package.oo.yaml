@@ -5,8 +5,7 @@ scripts:
     poetry install --no-root
 icon: ./icon.png
 dependencies:
-  array: 0.1.5
-  downloader: 0.1.1
+  {}
 name: nano_banana_pro
 displayName: "%display-name%"
 description: "%description%"

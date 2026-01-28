@@ -29,6 +29,7 @@ outputs_def:
       type: array
       items:
         type: string
+        ui:widget: file
 
 executor:
   name: python
@@ -39,4 +40,4 @@ executor:
 title: "%nano-banana-pro-result-checker-with-polling%"
 icon: ":carbon:progress-bar:"
 description: "%continuously-polls-the-image-generation-status-until-completion%"
-private: true
+private: false
