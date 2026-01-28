@@ -10,7 +10,7 @@ inputs_def:
 
   # === Optional Settings (collapsed group) ===
   - group: Optional Settings
-    collapsed: false
+    collapsed: true
 
   - handle: aspectRatio
     description: "%ai-image-generator-aspect-ratio-input%"
