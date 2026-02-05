@@ -9,7 +9,7 @@ nodes:
         value: png
       - handle: resolution
         value: 1K
-    task: self::nano-banana-pro
+    task: self::nano-banana-pro-generate
   - node_id: nano-banana-pro-result#1
     title: "%nano-banana-pro-12%"
     inputs_from:

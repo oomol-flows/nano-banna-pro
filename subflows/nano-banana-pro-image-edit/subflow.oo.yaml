@@ -1,0 +1,142 @@
+inputs_def:
+  - handle: prompt
+    description: "%the-text-prompt-describing-the-edits-to-apply%"
+    json_schema:
+      type: string
+      ui:widget: text
+    nullable: false
+
+  - handle: imageUrls
+    description: "%array-of-image-urls-to-edit-1-to-3-images%"
+    json_schema:
+      type: array
+      items:
+        type: string
+        ui:widget: file
+      minItems: 1
+      maxItems: 3
+    nullable: false
+
+  - group: Optional Settings
+    collapsed: true
+
+  - handle: aspectRatio
+    description: "%aspect-ratio-of-the-edited-image%"
+    json_schema:
+      enum:
+        - 21:9
+        - 16:9
+        - 3:2
+        - 4:3
+        - 5:4
+        - 1:1
+        - 4:5
+        - 3:4
+        - 2:3
+        - 9:16
+    value: 1:1
+    nullable: true
+
+  - handle: outputFormat
+    description: "%output-format-of-the-edited-image%"
+    json_schema:
+      enum:
+        - png
+        - jpeg
+        - webp
+        - jpg
+    value: png
+    nullable: true
+
+  - handle: resolution
+    description: "%resolution-of-the-edited-image-must-be-uppercase-k%"
+    json_schema:
+      enum:
+        - 1K
+        - 2K
+        - 4K
+    value: 1K
+    nullable: true
+
+  - handle: numImages
+    description: "%number-of-images-to-generate-1-to-8%"
+    json_schema:
+      type: number
+      minimum: 1
+      maximum: 8
+    value: 1
+    nullable: true
+
+  - handle: pollingInterval
+    description: "%polling-interval-in-seconds-default-2-seconds%"
+    json_schema:
+      type: number
+    value: 2
+    nullable: true
+
+  - handle: timeout
+    description: "%maximum-time-to-wait-in-seconds-default-300-seconds-5-minutes%"
+    json_schema:
+      type: number
+    value: 300
+    nullable: true
+
+outputs_def:
+  - handle: images
+    description: "%array-of-edited-image-urls%"
+    json_schema:
+      type: array
+      items:
+        type: string
+        ui:widget: file
+
+nodes:
+  - node_id: edit#1
+    task: self::nano-banana-pro-edit
+    inputs_from:
+      - handle: prompt
+        from_flow:
+          - input_handle: prompt
+      - handle: imageUrls
+        from_flow:
+          - input_handle: imageUrls
+      - handle: aspectRatio
+        from_flow:
+          - input_handle: aspectRatio
+      - handle: outputFormat
+        from_flow:
+          - input_handle: outputFormat
+      - handle: resolution
+        from_flow:
+          - input_handle: resolution
+      - handle: numImages
+        from_flow:
+          - input_handle: numImages
+
+  - node_id: result#1
+    task: self::nano-banana-pro-result
+    inputs_from:
+      - handle: sessionID
+        from_node:
+          - node_id: edit#1
+            output_handle: sessionID
+      - handle: pollingInterval
+        from_flow:
+          - input_handle: pollingInterval
+      - handle: timeout
+        from_flow:
+          - input_handle: timeout
+    outputs_to:
+      - handle: images
+        to_flow:
+          - output_handle: images
+
+title: "%nano-banana-image-editor%"
+icon: ":carbon:image-edit:"
+description: "%edit-images-using-nano-banana-pro-with-automatic-result-polling%"
+private: false
+outputs_from:
+  - handle: images
+    from_node:
+      - node_id: result#1
+        output_handle: images

@@ -1,6 +1,6 @@
 # Nano Banana Pro
 
-**Turn your words into beautiful images with AI - no technical skills required.**
+**Transform your words into beautiful images with AI - create from scratch or edit existing ones, no technical skills required.**
 
 [中文文档](./README_zh-CN.md)
 
@@ -8,25 +8,33 @@
 
 ## What is Nano Banana Pro?
 
-Nano Banana Pro helps you create stunning images from simple text descriptions using artificial intelligence. Whether you're brainstorming creative ideas, making content for social media, or exploring your artistic side, this tool transforms your imagination into visual reality.
+Nano Banana Pro helps you harness the power of artificial intelligence to both create stunning images from text descriptions and enhance existing images with simple instructions. Whether you're brainstorming creative ideas, making content for social media, refining your photos, or exploring your artistic side, this tool transforms your imagination into visual reality.
 
-Think of it like having a personal artist who instantly brings your ideas to life. Just describe what you want to see, and Nano Banana Pro creates it for you in seconds.
+Think of it like having a personal artist and photo editor who instantly brings your ideas to life and perfects your existing images. Just describe what you want to see or how you want to improve an image, and Nano Banana Pro creates it for you in seconds.
 
 ---
 
 ## What's Inside?
 
-Nano Banana Pro gives you everything you need to generate AI images, organized in three convenient ways:
+Nano Banana Pro gives you everything you need for AI-powered image creation and editing, organized in convenient ways:
 
-### 1. Complete Solution (Recommended for Most Users)
+### 1. Complete Solutions (Recommended for Most Users)
 
-**AI Image Generator** - The easiest way to get started. This all-in-one tool combines everything you need:
+**AI Image Generator** - Create images from scratch with text descriptions
 - Simply type what you want to see
 - Choose your image style and quality
 - Wait a moment while your image is created
 - Get your finished image automatically
 
-Perfect for: Quick projects, learning the tool, or when you want a simple, hands-free experience.
+Perfect for: Creating original content, visualizing ideas, generating backgrounds and scenes.
+
+**Nano Banana Image Editor** - Transform existing images with AI
+- Upload one to three images you want to enhance
+- Describe the changes you want to make
+- Choose your output preferences
+- Receive your edited images automatically
+
+Perfect for: Enhancing photos, making creative modifications, transforming image styles, combining elements from multiple images.
 
 ### 2. Building Blocks (For Custom Workflows)
 
@@ -36,10 +44,14 @@ If you need more control or want to build your own creative pipeline, you can us
 - Sends your description to begin making your image
 - Gives you a tracking number to monitor progress
 
-**Result Checker** - Watches your image being created
-- Monitors your image until it's ready
+**Image Editor** - Starts the image editing process
+- Submits your images and editing instructions
+- Returns a tracking number for monitoring
+
+**Result Checker** - Watches your image being created or edited
+- Monitors your work until it's ready
 - Automatically waits for completion
-- Delivers your finished image
+- Delivers your finished images
 
 Perfect for: Building custom workflows, connecting with other tools, or when you need specific control over the process.
 
@@ -53,17 +65,21 @@ Sample workflows show you exactly how everything works together. Use them as the
 
 ### Step 1: Choose Your Starting Point
 
-**New to AI image generation?**
+**Want to create images from scratch?**
 → Start with the **AI Image Generator** (the complete solution)
 
+**Want to enhance existing images?**
+→ Use the **Nano Banana Image Editor** (the complete editing solution)
+
 **Want to build something custom?**
-→ Use the **Image Generator** and **Result Checker** blocks
+→ Use the individual **Generator**, **Editor**, and **Result Checker** blocks
 
 **Just exploring?**
 → Try the example workflows first
 
-### Step 2: Describe Your Image
+### Step 2: Provide Your Input
 
+**For Creating New Images:**
 Write what you want to see. Be as detailed or simple as you like:
 
 **Simple examples:**
@@ -75,6 +91,24 @@ Write what you want to see. Be as detailed or simple as you like:
 - "A golden retriever puppy playing in a sunny park with butterflies"
 - "A peaceful mountain landscape at sunset with purple and orange clouds"
 - "A cozy bookstore cafe on a rainy afternoon with warm lighting"
+
+**For Editing Existing Images:**
+Upload your images and describe the changes:
+
+**Enhancement examples:**
+- "Add vibrant sunset colors to the sky"
+- "Make the background more professional and clean"
+- "Add flowers in the foreground"
+
+**Style transformation examples:**
+- "Transform this into a watercolor painting style"
+- "Make it look like a vintage photograph"
+- "Add a dreamy, ethereal atmosphere"
+
+**Creative edits:**
+- "Replace the cloudy sky with a starry night"
+- "Add snow falling in the scene"
+- "Make the person wearing a formal suit instead"
 
 *Pro tip: More details usually mean better results, but don't worry about being perfect - the AI is smart enough to understand natural descriptions.*
 
@@ -98,24 +132,31 @@ Choose options that match your needs:
 - JPEG - Smaller files, good quality
 - WebP - Modern format, great for websites
 
+**For Image Editing:**
+- Upload 1-3 images to work with
+- Generate up to 8 variations to choose from
+
 ---
 
-## What Can You Create?
+## What Can You Create and Edit?
 
 ### Content Creation
-Generate unique images for blog posts, social media, presentations, or websites without hiring a designer or photographer.
+Generate unique images for blog posts, social media, presentations, or websites without hiring a designer or photographer. Enhance existing photos to make them more professional and eye-catching.
 
 ### Visual Brainstorming
-Turn abstract ideas into concrete visuals to help communicate your vision to colleagues, clients, or friends.
+Turn abstract ideas into concrete visuals to help communicate your vision to colleagues, clients, or friends. Refine existing mockups or concepts with AI-powered modifications.
 
 ### Personal Projects
-Create custom artwork for gifts, home decoration, greeting cards, or personal collections.
+Create custom artwork for gifts, home decoration, greeting cards, or personal collections. Transform your personal photos into artistic masterpieces with creative edits.
 
 ### Learning and Experimenting
-Explore different artistic styles and discover what's possible with AI image generation.
+Explore different artistic styles and discover what's possible with AI image generation and editing. See how your photos can be transformed with different creative approaches.
 
 ### Marketing Materials
-Design eye-catching visuals for advertisements, banners, or promotional content.
+Design eye-catching visuals for advertisements, banners, or promotional content. Enhance product photos or create variations of existing marketing images.
+
+### Photo Enhancement
+Improve your photos by adding elements, changing backgrounds, adjusting atmospheres, or transforming styles - all without complex photo editing software.
 
 ---
 
@@ -127,6 +168,10 @@ Design eye-catching visuals for advertisements, banners, or promotional content.
 - Instead of: "a dog"
 - Try: "a golden retriever puppy with floppy ears playing in green grass"
 
+**For Editing, Focus on the Change:**
+- Instead of: "make it better"
+- Try: "add warm sunset lighting and make the colors more vibrant"
+
 **Include Important Details:**
 - What's the subject? (person, animal, object, scene)
 - What's happening? (action, mood, activity)
@@ -137,6 +182,20 @@ Design eye-catching visuals for advertisements, banners, or promotional content.
 - Colors: "vibrant blue sky" instead of just "sky"
 - Emotions: "peaceful garden" instead of just "garden"
 - Lighting: "warm sunset glow" instead of just "sunset"
+
+### Working with Image Editing
+
+**Combine Multiple Source Images:**
+You can upload up to 3 images to blend elements together or use as references for your edits.
+
+**Generate Multiple Variations:**
+Create up to 8 different versions in one go to compare results and pick your favorite.
+
+**Start with Clear Images:**
+Better quality source images generally lead to better editing results.
+
+**Be Clear About Changes:**
+Describe specifically what you want to add, remove, or transform in your images.
 
 ### Choosing Settings
 
@@ -173,7 +232,7 @@ Notice what descriptions work best and refine your approach over time.
 
 ### "How long does it take?"
 
-It depends on your quality setting:
+It depends on your quality setting and whether you're generating or editing:
 - 1K images: Usually 30 seconds to 1 minute
 - 2K images: About 1-2 minutes
 - 4K images: Can take 2-5 minutes
@@ -188,18 +247,26 @@ Try these tips:
 - Try different wording for the same idea
 - Adjust the quality or aspect ratio settings
 
+For editing, try providing clearer instructions about the specific changes you want.
+
 Remember, creating the perfect image often takes a few tries - that's normal and part of the creative process!
 
-### "Can I create any kind of image?"
+### "Can I edit any kind of image?"
 
-The AI works best with:
-- Natural scenes (landscapes, nature, weather)
-- Common objects and animals
-- People and characters
-- Artistic and abstract concepts
-- Everyday situations and activities
+The image editor works best with:
+- Photos of people, places, and objects
+- Existing artwork you want to modify
+- Screenshots you want to enhance
+- Images where you want to change specific elements
 
-The more clearly you describe what you want, the better the results will be.
+The clearer your source image and editing instructions, the better the results will be.
+
+### "How many images can I upload for editing?"
+
+You can upload 1 to 3 images at once. This allows you to:
+- Edit a single image
+- Combine elements from multiple images
+- Use reference images to guide the style
 
 ### "What if something goes wrong?"
 
@@ -222,14 +289,21 @@ The more clearly you describe what you want, the better the results will be.
 
 ## Understanding How It All Works Together
 
-### The Complete Solution Approach
+### The Complete Solutions Approach
 
-When you use the **AI Image Generator** (the all-in-one tool), here's what happens behind the scenes:
+**When using the AI Image Generator** (for creating from scratch):
 
 1. You write your description and choose your settings
 2. The image creation begins automatically
 3. The tool monitors the progress for you
 4. When ready, your finished image appears
+
+**When using the Nano Banana Image Editor** (for editing):
+
+1. You upload your images and describe the edits
+2. The editing process starts automatically
+3. The tool tracks the progress for you
+4. Your edited images appear when complete
 
 Everything happens smoothly without you needing to manage individual steps.
 
@@ -237,24 +311,33 @@ Everything happens smoothly without you needing to manage individual steps.
 
 If you're using the individual pieces, you're seeing the process broken down:
 
-**Image Generator block:**
-- Sends your request to start creating the image
-- Returns a tracking number (session ID)
-- Finishes quickly because it just starts the process
+**Image Generator or Image Editor blocks:**
+- Send your request to start the process
+- Return a tracking number (session ID)
+- Finish quickly because they just initiate the work
 
 **Result Checker block:**
 - Takes the tracking number from the first block
-- Keeps checking until your image is ready
-- Returns your completed image when done
+- Keeps checking until your images are ready
+- Returns your completed images when done
 
 These blocks naturally connect together: the tracking number from the first flows into the second. You might consider connecting them this way for a smooth workflow, though you're free to use them however makes sense for your project.
+
+### Combining Creation and Editing
+
+You can even combine these workflows creatively:
+- Generate an image from text, then edit it further with different instructions
+- Start with a photo, make edits, then use the result as inspiration for generating similar images
+- Create multiple variations and compare different approaches
 
 ---
 
 ## Real-World Examples
 
-### Example 1: Social Media Content
+### Example 1: Social Media Content Creation
 "I need an image for my coffee shop's Instagram post"
+
+**Your approach:** Use **AI Image Generator**
 
 **Your description:** "A steaming cup of cappuccino with latte art, on a wooden table with morning sunlight"
 
@@ -262,8 +345,36 @@ These blocks naturally connect together: the tracking number from the first flow
 
 **Result:** A beautiful coffee image perfect for Instagram, ready to post.
 
-### Example 2: Presentation Slide
+### Example 2: Photo Enhancement
+"I have a product photo but the background is cluttered"
+
+**Your approach:** Use **Nano Banana Image Editor**
+
+**Upload:** Your product photo
+
+**Your editing instruction:** "Replace the background with a clean, professional white studio backdrop"
+
+**Settings:** Square (1:1), 2K quality, PNG format
+
+**Result:** A professional product photo ready for your online store.
+
+### Example 3: Creative Transformation
+"I want to turn my landscape photo into an artistic piece"
+
+**Your approach:** Use **Nano Banana Image Editor**
+
+**Upload:** Your landscape photo
+
+**Your editing instruction:** "Transform this into a vibrant watercolor painting style with enhanced colors"
+
+**Settings:** Original aspect ratio, 4K quality, PNG format
+
+**Result:** Your photo transformed into beautiful artwork, perfect for printing and framing.
+
+### Example 4: Presentation Slide
 "I'm making slides about innovation and need a background image"
+
+**Your approach:** Use **AI Image Generator**
 
 **Your description:** "Abstract lightbulb made of colorful geometric shapes on a modern gradient background"
 
@@ -271,14 +382,18 @@ These blocks naturally connect together: the tracking number from the first flow
 
 **Result:** A professional-looking background that makes your slides stand out.
 
-### Example 3: Personal Gift
-"I want to create custom art for my friend who loves space"
+### Example 5: Combining Multiple Images
+"I want to merge elements from my vacation photos"
 
-**Your description:** "Dreamy night sky with purple and blue nebula clouds, distant stars, and a silhouette of pine trees in the foreground"
+**Your approach:** Use **Nano Banana Image Editor**
 
-**Settings:** Portrait (3:4), 4K quality, PNG format
+**Upload:** 2-3 of your vacation photos
 
-**Result:** High-quality artwork perfect for printing and framing.
+**Your editing instruction:** "Combine the sunset sky from the first image with the beach scene from the second image"
+
+**Settings:** Widescreen (16:9), 4K quality, JPEG format
+
+**Result:** A stunning composite that captures the best moments of your trip.
 
 ---
 
@@ -286,8 +401,8 @@ These blocks naturally connect together: the tracking number from the first flow
 
 ### Ready to Start?
 
-1. Pick which approach fits your needs (complete solution or building blocks)
-2. Think about what you want to create
+1. Pick which tool fits your needs (creating from scratch or editing existing images)
+2. Think about what you want to create or change
 3. Write a clear description
 4. Choose your settings
 5. Let Nano Banana Pro bring your vision to life!
@@ -298,18 +413,19 @@ These blocks naturally connect together: the tracking number from the first flow
 - Try various aspect ratios to find your favorite
 - Test different quality levels to understand the trade-offs
 - Explore the example workflows to see practical applications
+- Try both creation and editing to discover all the possibilities
 
 ### Share Your Creations
 
-Create amazing images and discover new ways to use AI in your creative projects!
+Create amazing images and discover new ways to use AI in your creative projects - whether you're starting from scratch or enhancing what you already have!
 
 ---
 
 ## Technical Information
 
-- **Version:** 0.0.2
+- **Version:** 0.0.8
 - **Repository:** [https://github.com/oomol-flows/nano-banna-pro](https://github.com/oomol-flows/nano-banna-pro)
 
 ---
 
-*Nano Banana Pro makes AI image generation accessible to everyone. No coding, no complex setup, no technical knowledge required - just your imagination and a few clicks.*
+*Nano Banana Pro makes AI image generation and editing accessible to everyone. No coding, no complex setup, no technical knowledge required - just your imagination and a few clicks.*

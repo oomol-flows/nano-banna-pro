@@ -1,13 +1,13 @@
-version: 0.0.7
+version: 0.1.1
 scripts:
   bootstrap: |
     npm install
     poetry install --no-root
-icon: ./icon.png
+icon: "./icon.png"
 dependencies:
   {}
 name: nano_banana_pro
 displayName: "%display-name%"
 description: "%description%"
 repository: https://github.com/oomol-flows/nano-banna-pro.git
-releaseNotes: init
+releaseNotes: fix icon

@@ -40,4 +40,4 @@ executor:
 title: "%nano-banana-pro-result-checker-with-polling%"
 icon: ":carbon:progress-bar:"
 description: "%continuously-polls-the-image-generation-status-until-completion%"
-private: false
+private: true

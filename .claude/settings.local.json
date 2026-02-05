@@ -1,14 +1,18 @@
 {
   "permissions": {
-    "defaultMode": "bypassPermissions",
     "allow": [
       "Bash",
       "Read",
       "Write",
       "WebFetch",
-      "mcp__oomol"
+      "mcp__oomol",
+      "Skill(oo_update_readme)",
+      "Skill(oo_update_readme:*)",
+      "Skill(oo_update_description)",
+      "Skill(oo_update_description:*)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "defaultMode": "bypassPermissions"
   }
 }

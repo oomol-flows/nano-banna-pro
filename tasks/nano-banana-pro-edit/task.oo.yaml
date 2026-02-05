@@ -1,0 +1,89 @@
+inputs_def:
+  - handle: prompt
+    description: "%the-text-prompt-describing-the-edits-to-apply%"
+    json_schema:
+      type: string
+      ui:widget: text
+    nullable: false
+
+  - handle: imageUrls
+    description: "%array-of-image-urls-to-edit-1-to-3-images%"
+    json_schema:
+      type: array
+      items:
+        type: string
+      minItems: 1
+      maxItems: 3
+    nullable: false
+
+  - group: Optional Settings
+    collapsed: true
+
+  - handle: aspectRatio
+    description: "%aspect-ratio-of-the-edited-image%"
+    json_schema:
+      enum:
+        - 21:9
+        - 16:9
+        - 3:2
+        - 4:3
+        - 5:4
+        - 1:1
+        - 4:5
+        - 3:4
+        - 2:3
+        - 9:16
+    value: 1:1
+    nullable: true
+
+  - handle: outputFormat
+    description: "%output-format-of-the-edited-image%"
+    json_schema:
+      enum:
+        - png
+        - jpeg
+        - webp
+        - jpg
+    value: png
+    nullable: true
+
+  - handle: resolution
+    description: "%resolution-of-the-edited-image-must-be-uppercase-k%"
+    json_schema:
+      enum:
+        - 1K
+        - 2K
+        - 4K
+    value: 1K
+    nullable: true
+
+  - handle: numImages
+    description: "%number-of-images-to-generate-1-to-8%"
+    json_schema:
+      type: number
+      minimum: 1
+      maximum: 8
+    value: 1
+    nullable: true
+
+outputs_def:
+  - handle: sessionID
+    description: "%session-id-for-the-image-editing-request%"
+    json_schema:
+      type: string
+
+  - handle: success
+    description: "%whether-the-submission-was-successful%"
+    json_schema:
+      type: boolean
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
+
+title: "%nano-banana-pro-image-editor%"
+icon: ":carbon:edit:"
+description: "%edit-images-using-the-nano-banana-pro-api-submits-a-request%"
+private: true

@@ -105,7 +105,7 @@ outputs_def:
 nodes:
   - node_id: nano-banana-pro#1
     title: "%nano-banana-pro-image-generator-1%"
-    task: self::nano-banana-pro
+    task: self::nano-banana-pro-generate
     inputs_from:
       - handle: prompt
         from_flow:

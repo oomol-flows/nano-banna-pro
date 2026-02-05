@@ -1,0 +1,26 @@
+title: "%test-image-edit-flow%"
+description: "%test-flow-for-nano-banana-image-edit-subflow%"
+
+nodes:
+  - node_id: edit#1
+    subflow: self::nano-banana-pro-image-edit
+    inputs_from:
+      - handle: prompt
+        value: "男人在车里倒立，双腿岔开，双手扶方向盘"
+      - handle: imageUrls
+        value:
+          - "https://storage.googleapis.com/falserverless/example_inputs/nano-b\
+            anana-edit-input.png"
+          - https://storage.googleapis.com/falserverless/example_inputs/nano-banana-edit-input-2.png
+      - handle: aspectRatio
+        value: "1:1"
+      - handle: outputFormat
+        value: "png"
+      - handle: resolution
+        value: "1K"
+      - handle: numImages
+        value: 1
+      - handle: pollingInterval
+        value: 2
+      - handle: timeout
+        value: 300

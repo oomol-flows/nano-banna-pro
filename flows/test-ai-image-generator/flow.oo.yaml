@@ -4,7 +4,7 @@ description: "%test-flow-for-the-ai-image-generator-subflow%"
 nodes:
   - node_id: ai-image-generator#1
     title: "%ai-image-generator-1%"
-    subflow: self::ai-image-generator
+    subflow: self::nano-banana-pro-image-generate
     inputs_from:
       - handle: prompt
         value: "A beautiful sunset over mountains with vibrant colors"

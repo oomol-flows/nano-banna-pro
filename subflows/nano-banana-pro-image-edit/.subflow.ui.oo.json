@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "edit#1": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "result#1": {
+      "rfNode": {
+        "position": {
+          "x": 551.0530970007543,
+          "y": -323.80258907193314
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": -500
+        }
+      },
+      "sections": {
+        "subflowInput": {
+          "groupCollapsed": {
+            "Optional Settings": true
+          }
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 1056.4771957683606,
+          "y": -419.0493527320167
+        }
+      }
+    }
+  }
+}
