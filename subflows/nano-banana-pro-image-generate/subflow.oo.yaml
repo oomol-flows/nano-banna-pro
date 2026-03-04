@@ -56,6 +56,14 @@ inputs_def:
     nullable: true
     executor_name: python
 
+  - handle: numImages
+    description: "%number-of-images-to-generate-1-to-8%"
+    json_schema:
+      type: integer
+    value: 1
+    nullable: true
+    executor_name: python
+
   - handle: pollingInterval
     description: "%ai-image-generator-polling-interval-input%"
     json_schema:
@@ -122,6 +130,10 @@ nodes:
         value: 1K
         from_flow:
           - input_handle: resolution
+      - handle: numImages
+        value: 1
+        from_flow:
+          - input_handle: numImages
     progress_weight: 10
 
   - node_id: nano-banana-pro-result#1

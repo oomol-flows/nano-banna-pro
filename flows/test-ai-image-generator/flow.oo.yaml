@@ -18,3 +18,5 @@ nodes:
         value: 2
       - handle: timeout
         value: 300
+      - handle: numImages
+        value: 1

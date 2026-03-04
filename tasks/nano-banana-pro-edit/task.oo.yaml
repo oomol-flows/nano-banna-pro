@@ -18,7 +18,7 @@ inputs_def:
     nullable: false
 
   - group: Optional Settings
-    collapsed: true
+    collapsed: false
 
   - handle: aspectRatio
     description: "%aspect-ratio-of-the-edited-image%"
@@ -61,9 +61,7 @@ inputs_def:
   - handle: numImages
     description: "%number-of-images-to-generate-1-to-8%"
     json_schema:
-      type: number
-      minimum: 1
-      maximum: 8
+      type: integer
     value: 1
     nullable: true
 

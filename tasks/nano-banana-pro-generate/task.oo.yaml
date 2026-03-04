@@ -7,7 +7,7 @@ inputs_def:
     nullable: false
 
   - group: Optional Settings
-    collapsed: true
+    collapsed: false
 
   - handle: aspectRatio
     description: "%aspect-ratio-of-the-generated-image%"
@@ -48,6 +48,13 @@ inputs_def:
         - 2K
         - 4K
     value: 1K
+    nullable: true
+
+  - handle: numImages
+    description: "%number-of-images-to-generate-1-to-8%"
+    json_schema:
+      type: integer
+    value: 1
     nullable: true
 
 outputs_def:

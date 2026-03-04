@@ -5,6 +5,7 @@ class Inputs(typing.TypedDict):
     aspectRatio: typing.Literal["21:9", "16:9", "3:2", "4:3", "5:4", "1:1", "4:5", "3:4", "2:3", "9:16"] | None
     outputFormat: typing.Literal["png", "jpeg", "webp", "jpg"] | None
     resolution: typing.Literal["1K", "2K", "4K"] | None
+    numImages: int | None
 class Outputs(typing.TypedDict):
     sessionID: typing.NotRequired[str]
     success: typing.NotRequired[bool]
@@ -47,6 +48,14 @@ async def main(params: Inputs, context: Context) -> Outputs:
 
     if params.get("resolution"):
         request_body["resolution"] = params["resolution"]
+
+    # Add numImages parameter
+    num_images = params.get("numImages")
+    if num_images is not None:
+        # Validate range
+        if num_images < 1 or num_images > 8:
+            raise ValueError("numImages must be between 1 and 8")
+        request_body["numImages"] = int(num_images)
 
     # Make the API request
     response = requests.post(

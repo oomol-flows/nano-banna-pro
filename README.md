@@ -132,9 +132,13 @@ Choose options that match your needs:
 - JPEG - Smaller files, good quality
 - WebP - Modern format, great for websites
 
+**Number of Images:**
+- Generate 1-8 images at once to get multiple variations
+- Perfect for exploring different creative possibilities
+- Works for both creating new images and editing existing ones
+
 **For Image Editing:**
-- Upload 1-3 images to work with
-- Generate up to 8 variations to choose from
+- Upload 1-3 images to work with as source material
 
 ---
 
@@ -185,11 +189,11 @@ Improve your photos by adding elements, changing backgrounds, adjusting atmosphe
 
 ### Working with Image Editing
 
-**Combine Multiple Source Images:**
+**Upload Multiple Source Images:**
 You can upload up to 3 images to blend elements together or use as references for your edits.
 
 **Generate Multiple Variations:**
-Create up to 8 different versions in one go to compare results and pick your favorite.
+Create up to 8 different versions in one go to compare results and pick your favorite - works for both creating new images and editing existing ones.
 
 **Start with Clear Images:**
 Better quality source images generally lead to better editing results.
@@ -214,8 +218,11 @@ Begin with 1K quality to test your idea quickly. Once you're happy with the resu
 
 ### Working Efficiently
 
+**Generate Multiple Variations:**
+Create several versions at once (up to 8) to explore different outcomes and choose the best one.
+
 **Test Multiple Ideas:**
-Try several descriptions to compare results and pick your favorite.
+Try different descriptions to compare results and discover which approach works best for you.
 
 **Keep It Organized:**
 If the tool offers folder options, name them clearly so you can find your images later.
@@ -263,10 +270,17 @@ The clearer your source image and editing instructions, the better the results w
 
 ### "How many images can I upload for editing?"
 
-You can upload 1 to 3 images at once. This allows you to:
+You can upload 1 to 3 source images at once when editing. This allows you to:
 - Edit a single image
 - Combine elements from multiple images
 - Use reference images to guide the style
+
+### "How many images can I generate at once?"
+
+You can generate up to 8 images in a single request, whether you're creating from scratch or editing existing images. This is perfect for:
+- Exploring different creative variations
+- Comparing multiple outcomes
+- Finding the perfect version among several options
 
 ### "What if something goes wrong?"
 
@@ -341,9 +355,11 @@ You can even combine these workflows creatively:
 
 **Your description:** "A steaming cup of cappuccino with latte art, on a wooden table with morning sunlight"
 
-**Settings:** Square (1:1), 2K quality, JPEG format
+**Settings:** Square (1:1), 2K quality, JPEG format, 1 image
 
 **Result:** A beautiful coffee image perfect for Instagram, ready to post.
+
+**Optional variation:** Generate 3-4 versions at once to pick the best composition.
 
 ### Example 2: Photo Enhancement
 "I have a product photo but the background is cluttered"
@@ -354,9 +370,9 @@ You can even combine these workflows creatively:
 
 **Your editing instruction:** "Replace the background with a clean, professional white studio backdrop"
 
-**Settings:** Square (1:1), 2K quality, PNG format
+**Settings:** Square (1:1), 2K quality, PNG format, generate 2-3 variations
 
-**Result:** A professional product photo ready for your online store.
+**Result:** Multiple professional product photos to choose from, ready for your online store.
 
 ### Example 3: Creative Transformation
 "I want to turn my landscape photo into an artistic piece"

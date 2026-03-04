@@ -6,7 +6,7 @@ class Inputs(typing.TypedDict):
     aspectRatio: typing.Literal["21:9", "16:9", "3:2", "4:3", "5:4", "1:1", "4:5", "3:4", "2:3", "9:16"] | None
     outputFormat: typing.Literal["png", "jpeg", "webp", "jpg"] | None
     resolution: typing.Literal["1K", "2K", "4K"] | None
-    numImages: float | None
+    numImages: int | None
 class Outputs(typing.TypedDict):
     sessionID: typing.NotRequired[str]
     success: typing.NotRequired[bool]
