@@ -15,7 +15,8 @@ inputs_def:
         format: uri
       minItems: 1
       maxItems: 3
-    nullable: false
+    value:
+    nullable: true
 
   - group: Optional Settings
     collapsed: true

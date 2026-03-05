@@ -1,4 +1,4 @@
-version: 0.1.7
+version: 0.1.8
 scripts:
   bootstrap: |
     npm install
@@ -10,4 +10,4 @@ name: nano_banana_pro
 displayName: "%display-name%"
 description: "%description%"
 repository: https://github.com/oomol-flows/nano-banna-pro.git
-releaseNotes: "chore: update description"
+releaseNotes: "fix: image urls is optional"
