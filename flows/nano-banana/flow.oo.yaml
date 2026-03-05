@@ -3,12 +3,19 @@ nodes:
     title: "%nano-banana-pro-1%"
     inputs_from:
       - handle: prompt
+        value: "A beautiful sunset over mountains"
+      - handle: imageUrls
+        value:
+        nullable: true
       - handle: aspectRatio
         value: 1:1
       - handle: outputFormat
         value: png
       - handle: resolution
         value: 1K
+      - handle: numImages
+        value:
+        nullable: true
     task: self::nano-banana-pro-generate
   - node_id: nano-banana-pro-result#1
     title: "%nano-banana-pro-12%"

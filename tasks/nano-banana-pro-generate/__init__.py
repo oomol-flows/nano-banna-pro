@@ -2,6 +2,7 @@
 import typing
 class Inputs(typing.TypedDict):
     prompt: str
+    imageUrls: list[str] | None
     aspectRatio: typing.Literal["21:9", "16:9", "3:2", "4:3", "5:4", "1:1", "4:5", "3:4", "2:3", "9:16"] | None
     outputFormat: typing.Literal["png", "jpeg", "webp", "jpg"] | None
     resolution: typing.Literal["1K", "2K", "4K"] | None
@@ -16,10 +17,12 @@ import requests
 
 async def main(params: Inputs, context: Context) -> Outputs:
     """
-    Generate images using the nano banana pro API.
+    Generate or edit images using the nano banana pro API.
 
+    If imageUrls is provided, performs image editing.
+    Otherwise, performs image generation.
     Submits a request to the fusion-api endpoint and returns a session ID
-    for tracking the image generation.
+    for tracking the task.
     """
 
     # Get OOMOL token for authentication
@@ -34,10 +37,18 @@ async def main(params: Inputs, context: Context) -> Outputs:
         "Content-Type": "application/json"
     }
 
-    # Prepare request body with required and optional parameters
+    # Prepare request body with required parameters
     request_body = {
         "prompt": params["prompt"]
     }
+
+    # Add imageUrls if provided (for editing mode)
+    image_urls = params.get("imageUrls")
+    if image_urls:
+        # Validate imageUrls array
+        if len(image_urls) < 1 or len(image_urls) > 3:
+            raise ValueError("imageUrls must contain between 1 and 3 image URLs")
+        request_body["imageUrls"] = image_urls
 
     # Add optional parameters if provided
     if params.get("aspectRatio"):

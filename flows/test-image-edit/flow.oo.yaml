@@ -3,7 +3,7 @@ description: "%test-flow-for-nano-banana-image-edit-subflow%"
 
 nodes:
   - node_id: edit#1
-    subflow: self::nano-banana-pro-image-edit
+    subflow: self::nano-banana-pro-image-generate
     inputs_from:
       - handle: prompt
         value: "人物换成企鹅"

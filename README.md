@@ -40,13 +40,10 @@ Perfect for: Enhancing photos, making creative modifications, transforming image
 
 If you need more control or want to build your own creative pipeline, you can use these individual pieces:
 
-**Image Generator** - Starts the image creation process
+**Image Generator** - Starts the image creation or editing process
 - Sends your description to begin making your image
+- When you provide reference images, it can edit them or create new images based on them
 - Gives you a tracking number to monitor progress
-
-**Image Editor** - Starts the image editing process
-- Submits your images and editing instructions
-- Returns a tracking number for monitoring
 
 **Result Checker** - Watches your image being created or edited
 - Monitors your work until it's ready
@@ -72,7 +69,7 @@ Sample workflows show you exactly how everything works together. Use them as the
 → Use the **Nano Banana Image Editor** (the complete editing solution)
 
 **Want to build something custom?**
-→ Use the individual **Generator**, **Editor**, and **Result Checker** blocks
+→ Use the **Image Generator** block with optional reference images, and the **Result Checker** block
 
 **Just exploring?**
 → Try the example workflows first
@@ -201,6 +198,26 @@ Better quality source images generally lead to better editing results.
 **Be Clear About Changes:**
 Describe specifically what you want to add, remove, or transform in your images.
 
+### Using Reference Images with Building Blocks
+
+When using the **Image Generator** block directly, you have an extra option:
+
+**Reference Images (Optional):**
+- Leave empty to create new images from scratch
+- Add 1-3 image URLs to enable editing or style-guided generation
+
+**What happens with reference images:**
+- Your images serve as a starting point
+- Your description guides how to transform them
+- The AI can edit existing elements or create entirely new images inspired by your references
+
+**Example uses:**
+- Upload a photo and describe changes: "Add a sunset sky"
+- Upload artwork and request variations: "Create a similar composition with different colors"
+- Upload multiple images and blend elements: "Combine the mountains from image 1 with the river from image 2"
+
+This gives you flexibility to switch between creating and editing within a single block.
+
 ### Choosing Settings
 
 **Start Fast, Then Upgrade:**
@@ -325,9 +342,10 @@ Everything happens smoothly without you needing to manage individual steps.
 
 If you're using the individual pieces, you're seeing the process broken down:
 
-**Image Generator or Image Editor blocks:**
+**Image Generator block:**
 - Send your request to start the process
-- Return a tracking number (session ID)
+- Optionally provide reference images for editing or style-guided generation
+- Returns a tracking number (session ID)
 - Finish quickly because they just initiate the work
 
 **Result Checker block:**
@@ -337,12 +355,17 @@ If you're using the individual pieces, you're seeing the process broken down:
 
 These blocks naturally connect together: the tracking number from the first flows into the second. You might consider connecting them this way for a smooth workflow, though you're free to use them however makes sense for your project.
 
+**How reference images work:**
+- Without reference images: Creates new images from your text description
+- With reference images: Edits the images or creates new ones inspired by them
+
 ### Combining Creation and Editing
 
 You can even combine these workflows creatively:
 - Generate an image from text, then edit it further with different instructions
 - Start with a photo, make edits, then use the result as inspiration for generating similar images
 - Create multiple variations and compare different approaches
+- Use the Image Generator block with reference images to seamlessly switch between creating and editing
 
 ---
 

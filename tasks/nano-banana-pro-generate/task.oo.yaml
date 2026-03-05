@@ -6,6 +6,17 @@ inputs_def:
       ui:widget: text
     nullable: false
 
+  - handle: imageUrls
+    description: "%array-of-image-urls-to-edit-1-to-3-images%"
+    json_schema:
+      type: array
+      items:
+        type: string
+        format: uri
+      minItems: 1
+      maxItems: 3
+    nullable: true
+
   - group: Optional Settings
     collapsed: false
 
