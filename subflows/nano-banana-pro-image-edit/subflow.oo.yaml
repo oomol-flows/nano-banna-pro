@@ -12,7 +12,7 @@ inputs_def:
       type: array
       items:
         type: string
-        ui:widget: file
+        format: uri
       minItems: 1
       maxItems: 3
     nullable: false
