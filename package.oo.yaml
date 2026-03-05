@@ -1,4 +1,4 @@
-version: 0.1.6
+version: 0.1.7
 scripts:
   bootstrap: |
     npm install
@@ -10,4 +10,4 @@ name: nano_banana_pro
 displayName: "%display-name%"
 description: "%description%"
 repository: https://github.com/oomol-flows/nano-banna-pro.git
-releaseNotes: "fix: merge generate and edit block"
+releaseNotes: "chore: update description"
