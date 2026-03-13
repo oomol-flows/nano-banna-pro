@@ -34,6 +34,5 @@
   "nano-banana-image-editor": "Nano Banana Pro Image Generator",
   "edit-images-using-nano-banana-pro-with-automatic-result-polling": "Generate or edit images using AI with automatic result polling",
   "array-of-edited-image-urls": "Array of generated image URLs",
-  "test-image-edit-flow": "Test Image Edit Flow",
-  "test-flow-for-nano-banana-image-edit-subflow": "Test flow for image editing subflow"
+  "folder-where-the-file-will-be-saved-auto-detect-if-empty": "Folder where the file will be saved (auto-detect if empty)"
 }

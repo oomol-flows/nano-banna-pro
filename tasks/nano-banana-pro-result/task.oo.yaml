@@ -29,7 +29,7 @@ outputs_def:
       type: array
       items:
         type: string
-        ui:widget: file
+        format: uri
 
 executor:
   name: python

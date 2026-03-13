@@ -128,6 +128,17 @@ nodes:
       - handle: images
         to_flow:
           - output_handle: images
+  - node_id: map#1
+    title: "Map #1"
+    inputs_from:
+      - handle: array
+        from_node:
+          - node_id: result#1
+            output_handle: images
+    subflow: array::map
+    slots:
+      - slot_node_id: +slot#2
+        slotflow: self::+slotflow#1
 
 title: "%nano-banana-image-editor%"
 icon: ":carbon:image-edit:"
@@ -136,5 +147,5 @@ private: false
 outputs_from:
   - handle: images
     from_node:
-      - node_id: result#1
-        output_handle: images
+      - node_id: map#1
+        output_handle: array

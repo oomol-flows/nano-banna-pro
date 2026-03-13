@@ -1,13 +1,14 @@
-version: 0.1.8
+version: 0.2.0
 scripts:
   bootstrap: |
     npm install
     poetry install --no-root
 icon: "./icon.png"
 dependencies:
-  {}
+  array: 0.1.5
+  downloader: 0.1.5
 name: nano_banana_pro
 displayName: "%display-name%"
 description: "%description%"
 repository: https://github.com/oomol-flows/nano-banna-pro.git
-releaseNotes: "fix: image urls is optional"
+releaseNotes: "fix: output file, not uri"

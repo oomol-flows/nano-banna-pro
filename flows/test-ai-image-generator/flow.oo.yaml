@@ -7,7 +7,8 @@ nodes:
     subflow: self::nano-banana-pro-image-generate
     inputs_from:
       - handle: prompt
-        value: "A beautiful sunset over mountains with vibrant colors"
+        value: "A beautiful sunset over mountains with vibrant colors, with oomol icon.
+          For social app avatar background"
       - handle: aspectRatio
         value: 16:9
       - handle: outputFormat
@@ -20,3 +21,6 @@ nodes:
         value: 300
       - handle: numImages
         value: 1
+      - handle: imageUrls
+        value:
+          - https://oomol.com/img/logo2x.png

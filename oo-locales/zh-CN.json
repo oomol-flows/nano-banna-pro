@@ -34,6 +34,5 @@
   "nano-banana-image-editor": "Nano Banana Pro 图像生成器",
   "edit-images-using-nano-banana-pro-with-automatic-result-polling": "使用 AI 生成或编辑图像，自动轮询获取结果",
   "array-of-edited-image-urls": "生成的图像 URL 数组",
-  "test-image-edit-flow": "测试图像编辑流程",
-  "test-flow-for-nano-banana-image-edit-subflow": "图像编辑子流程的测试流程"
+  "folder-where-the-file-will-be-saved-auto-detect-if-empty": "文件将被保存的文件夹（如为空则自动检测）"
 }
