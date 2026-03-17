@@ -63,6 +63,8 @@ inputs_def:
     description: "%number-of-images-to-generate-1-to-8%"
     json_schema:
       type: integer
+      minimum: 1
+      maximum: 4
     nullable: true
 
   - handle: pollingInterval
